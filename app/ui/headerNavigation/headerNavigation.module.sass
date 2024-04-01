@@ -1,0 +1,22 @@
+.navigation
+    &__links
+        display: flex
+        &_link
+            list-style-type: none
+            &:not(:last-child)
+                margin-right: 25px
+            &_href
+                font-size: 20px
+
+                transition: color 0.3s ease
+                &:hover
+                    color: #282a2e
+
+@media (max-width: 1130px)
+    .navigation
+        &__links
+            &_link
+                &:not(:last-child)
+                    margin-right: 20px
+                &_href
+                    font-size: 17px
