@@ -4,6 +4,7 @@ import styles from "./layout.module.sass";
 import HeaderLogo from "./ui/headerlogo/headerLogo";
 import HeaderNavigation from "./ui/headerNavigation/headerNavigation";
 import { roboto } from "./lib/fonts";
+import ContacsSection from "./ui/contacsSection/contacsSection";
 
 export const metadata: Metadata = {
   title: "О, Вингорад | Апарт-отель",
@@ -24,7 +25,13 @@ export default function RootLayout({
           <HeaderNavigation />
         </header>
         {children}
-        <footer></footer>
+        <footer className={styles.footer}>
+          <ContacsSection />
+          <div className={styles.footer_copyright_and_yaer}>
+            <p className={styles.footer_copyright}>©Апарт-отель “О, Виноград”</p>
+            <p className={styles.footer_year}>2024, Официальный сайт</p>
+          </div>
+        </footer>
       </body>
     </html>
   );

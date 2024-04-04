@@ -12,7 +12,7 @@ export default function HeaderNavigation() {
           <Link href="" className={styles.navigation__links_link_href}>Номера</Link>
         </li>
         <li className={styles.navigation__links_link}>
-          <Link href="" className={styles.navigation__links_link_href}>Преимущества</Link>
+          <Link href="/#advantages" className={styles.navigation__links_link_href}>Преимущества</Link>
         </li>
         <li className={styles.navigation__links_link}>
           <Link href="" className={styles.navigation__links_link_href}>Акции</Link>
