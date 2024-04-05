@@ -22,8 +22,8 @@ import viewComfort_1 from "@/public/photosRooms/viewComfort/DSCF8392.jpg";
 import viewComfort_2 from "@/public/photosRooms/viewComfort/DSCF8396.jpg";
 import viewComfort_3 from "@/public/photosRooms/viewComfort/DSCF8398.jpg";
 import viewComfort_4 from "@/public/photosRooms/viewComfort/DSCF8401.jpg";
-import viewComfort_5 from "@/public/photosRooms/viewComfort/DSCF8392.jpg";
-import viewComfort_6 from "@/public/photosRooms/viewComfort/DSCF8392.jpg";
+import viewComfort_5 from "@/public/photosRooms/viewComfort/IMG_0371.jpg";
+import viewComfort_6 from "@/public/photosRooms/viewComfort/IMG_0378.jpg";
 
 import comfortWithBalcony_1 from "@/public/photosRooms/comfortWithBalcony/DSCF8196.jpg";
 import comfortWithBalcony_2 from "@/public/photosRooms/comfortWithBalcony/DSCF8198.jpg";
