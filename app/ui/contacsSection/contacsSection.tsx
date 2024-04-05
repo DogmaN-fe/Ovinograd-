@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import styles from "./contacsSection.module.css";
+import styles from "./contacsSection.module.sass";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,32 +9,32 @@ import mail from "@/public/mail_qbewr5yvdo6s.svg";
 
 export default function ContacsSection(): ReactElement {
   return (
-    <section id="contacs" className={styles.contacs_section}>
-      <div className={styles.contacs}>
-        <h4 className={styles.contacs_title}>Наш адрес:</h4>
-        <span className={styles.position}>
+    <section id="contacs" className={styles.contacsSection}>
+      <div className={styles.contacsSection__section}>
+        <h3 className={styles.contacsSection__section_title}>Наш адрес:</h3>
+        <span className={styles.contacsSection__section_title__position}>
           <Image src={address} alt="иконка локатора" width={16} height={16} />
-          <p className={styles.contacs_address}>
+          <p className={styles.contacsSection__section_title_address}>
             г. Сочи, ул. Виноградная, д. 216А
           </p>
         </span>
-        <span className={styles.position}>
+        <span className={styles.contacsSection__section_title__position}>
           <Image src={mail} alt="иконка локатора" width={16} height={16} />
           <Link
-            className={styles.contacs_mail}
+            className={styles.contacsSection__section_title_mail}
             href="mailto:akvinograd@yandex.ru"
           >
             akvinograd@yandex.ru
           </Link>
         </span>
-        <span className={styles.position}>
+        <span className={styles.contacsSection__section_title__position}>
           <Image src={phone} alt="иконка локатора" width={16} height={16} />
-          <Link className={styles.contacs_phone} href={"tel:89881533003"}>
+          <Link className={styles.contacsSection__section_title_phone} href={"tel:89881533003"}>
             8 (988) 153-30-03
           </Link>
         </span>
       </div>
-      <div className={styles.map}>
+      <div className={styles.contacsSection__section_map}>
         <div
           style={{
             position: "relative",

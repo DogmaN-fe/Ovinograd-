@@ -96,6 +96,10 @@ a {
   text-decoration: none;
 }
 
+strong{
+  color: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

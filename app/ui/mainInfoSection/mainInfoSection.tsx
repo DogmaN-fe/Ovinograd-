@@ -15,6 +15,7 @@ export default function MainInfoSection(): ReactElement {
             src={logo}
             alt={"Логотип"}
             fill
+            sizes="(max-width: 100%)"
           />
         </div>
         <div className={styles.mainInfoSection__section_description}>

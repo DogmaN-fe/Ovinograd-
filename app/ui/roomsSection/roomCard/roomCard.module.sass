@@ -1,0 +1,39 @@
+.RoomCard__card
+    position: relative
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    opacity: 1
+
+    transition: opacity 0.4s ease
+    &__title
+        margin-bottom: 15px
+        &_text
+            font-size: 40px
+            color: #282a2e
+
+    &__photos
+        display: grid
+
+        width: 100%
+
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(2, 370px)
+        &_photo
+            position: relative
+
+@media (max-width: 1230px)
+    .RoomCard__card
+        &__photos
+            grid-template-rows: repeat(2, 270px)
+
+@media (max-width: 800px)
+    .RoomCard__card
+        &__title
+            &_text
+                font-size: 25px
+        &__photos
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(3, 170px)

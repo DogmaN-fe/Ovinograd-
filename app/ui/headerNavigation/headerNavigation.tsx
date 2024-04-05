@@ -1,30 +1,157 @@
-import Link from 'next/link';
-import styles from './headerNavigation.module.sass'
+"use client";
+
+import Link from "next/link";
+import styles from "./headerNavigation.module.sass";
+import clsx from "clsx";
+import { useState } from "react";
 
 export default function HeaderNavigation() {
+  const [isHidden, setIsHidden] = useState(true);
+
+  const openMenu = () => {
+    setIsHidden(!isHidden);
+  };
+
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    const targetId = e.target.getAttribute("href").substring(2);
+
+    console.log(window.location.href);
+
+    if (window.location.href.includes("/reservations")) {
+      window.location.href = `/#${targetId}`;
+    }
+
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    setIsHidden(true);
+  };
+
   return (
     <nav className={styles.navigation}>
       <ul className={styles.navigation__links}>
         <li className={styles.navigation__links_link}>
-          <Link href="/#about-hotel" className={styles.navigation__links_link_href}>Об отеле</Link>
+          <Link
+            href="/#about-hotel"
+            className={styles.navigation__links_link_href}
+            onClick={handleClick}
+          >
+            Об отеле
+          </Link>
         </li>
         <li className={styles.navigation__links_link}>
-          <Link href="" className={styles.navigation__links_link_href}>Номера</Link>
+          <Link
+            href="/#rooms"
+            className={styles.navigation__links_link_href}
+            onClick={handleClick}
+          >
+            Номера
+          </Link>
         </li>
         <li className={styles.navigation__links_link}>
-          <Link href="/#advantages" className={styles.navigation__links_link_href}>Преимущества</Link>
+          <Link
+            href="/#advantages"
+            className={styles.navigation__links_link_href}
+            onClick={handleClick}
+          >
+            Преимущества
+          </Link>
         </li>
         <li className={styles.navigation__links_link}>
-          <Link href="" className={styles.navigation__links_link_href}>Акции</Link>
+          <Link
+            href="/#action"
+            className={styles.navigation__links_link_href}
+            onClick={handleClick}
+          >
+            Акции
+          </Link>
         </li>
         <li className={styles.navigation__links_link}>
-          <Link href="" className={styles.navigation__links_link_href}>Что вокруг</Link>
+          <Link
+            href=""
+            className={styles.navigation__links_link_href}
+            onClick={handleClick}
+          >
+            Что вокруг
+          </Link>
         </li>
         <li className={styles.navigation__links_link}>
-          <Link href="" className={styles.navigation__links_link_href}>Контакты</Link>
+          <Link
+            href="/#contacs"
+            className={styles.navigation__links_link_href}
+            onClick={handleClick}
+          >
+            Контакты
+          </Link>
         </li>
       </ul>
-      <span style={{ display: "none" }}></span>
+      <span className={styles.navigation_mobile} style={{ display: "none" }}>
+        <button className={styles.navigation_mobile__button} onClick={openMenu}>
+          ☰
+        </button>
+        <ul
+          className={styles.navigation_mobile__links}
+          style={{ display: isHidden ? "none" : "block" }}
+        >
+          <li className={styles.navigation__links_link}>
+            <Link
+              href="/#about-hotel"
+              className={styles.navigation__links_link_href}
+              onClick={handleClick}
+            >
+              Об отеле
+            </Link>
+          </li>
+          <li className={styles.navigation__links_link}>
+            <Link
+              href="/#rooms"
+              className={styles.navigation__links_link_href}
+              onClick={handleClick}
+            >
+              Номера
+            </Link>
+          </li>
+          <li className={styles.navigation__links_link}>
+            <Link
+              href="/#advantages"
+              className={styles.navigation__links_link_href}
+              onClick={handleClick}
+            >
+              Преимущества
+            </Link>
+          </li>
+          <li className={styles.navigation__links_link}>
+            <Link
+              href="/#action"
+              className={styles.navigation__links_link_href}
+              onClick={handleClick}
+            >
+              Акции
+            </Link>
+          </li>
+          <li className={styles.navigation__links_link}>
+            <Link
+              href=""
+              className={styles.navigation__links_link_href}
+              onClick={handleClick}
+            >
+              Что вокруг
+            </Link>
+          </li>
+          <li className={styles.navigation__links_link}>
+            <Link
+              href="/#contacs"
+              className={styles.navigation__links_link_href}
+              onClick={handleClick}
+            >
+              Контакты
+            </Link>
+          </li>
+        </ul>
+      </span>
     </nav>
   );
 }

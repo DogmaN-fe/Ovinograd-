@@ -14,6 +14,7 @@ export default function HeaderLogo(): ReactElement {
           src={headerLogo}
           alt={"Логотип"}
           fill={true}
+          sizes="(max-width: 100%)"
           priority
         />
       </Link>

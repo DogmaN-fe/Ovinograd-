@@ -14,6 +14,7 @@ export default function AdvantagesSection(): ReactElement {
   return (
     <section id="advantages" className={styles.advantagesSection}>
       <article className={styles.advantagesSection__section}>
+        <p className={styles.advantagesSection__section_title}>Преимущества</p>
         <ul className={styles.advantagesSection__section_list}>
           <li className={styles.advantagesSection__section_list__element}>
             <Image className={styles.advantagesSection__section_list__element_image} src={beach} alt={"иконка: пляж"} width={50} height={50}/>7 мин на машине до пляжа

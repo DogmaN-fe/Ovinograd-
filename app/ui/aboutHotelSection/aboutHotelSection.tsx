@@ -27,7 +27,13 @@ export default function AboutHotelSection(): ReactElement {
           <BookingButton />
         </div>
         <div className={styles.aboutHotelSection__section_image}>
-          <Image src={image} alt={"Фото отеля"} fill priority/>
+          <Image
+            src={image}
+            alt={"Фото отеля"}
+            fill
+            sizes="(max-width: 100%)"
+            priority
+          />
         </div>
       </article>
     </section>
