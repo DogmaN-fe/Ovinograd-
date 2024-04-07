@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import styles from "./page.module.sass";
 
 export default function Page(): ReactElement {
-  let address = `https://reservationsteps.ru/rooms/index/79785b1e-e05b-4e3d-9c17-1b2b2be0eed5`;
+  let address = `https://reservationsteps.ru/rooms/index/f7f1badd-4190-468a-b8b3-3ce623010934?colorSchemePreview=1`;
 
   return (
     <main className={styles.main}>
