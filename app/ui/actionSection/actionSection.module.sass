@@ -6,25 +6,49 @@
     &__section
         display: flex
         width: 70%
-        flex-direction: column
 
+        justify-content: center
         align-items: center
 
-        padding: 100px 0
+        padding: 100px 60px
 
         background-color: #ffffff
         -webkit-box-shadow: 0px 0px 32px 10px rgba(71, 74, 81, 0.29)
         -moz-box-shadow: 0px 0px 32px 10px rgba(71, 74, 81, 0.29)
         box-shadow: 0px 0px 32px 10px rgba(71, 74, 81, 0.29)
-        &_title
-            margin-bottom: 50px
-            font-size: 50px
-            color: #474a51
-        &_description
-            margin-bottom: 30px
-            font-size: 40px
-            line-height: 1.5
-            color: #474a51
+        &_info
+            display: flex
+            flex-direction: column
+
+            width: 50%
+
+            align-items: center
+
+            margin-bottom: 20px
+            margin-right: 20px
+            &__title
+                margin-bottom: 50px
+                font-size: 50px
+                color: #474a51
+            &__description
+                margin-bottom: 30px
+                text-align: center
+                font-size: 40px
+                line-height: 1.5
+                color: #474a51
+        &_photos
+            display: flex
+            flex-wrap: wrap
+            width: 50%
+            &__photo
+                position: relative
+                width: 45%
+                height: 150px
+                margin: 0 10px 10px 0
+
+                -webkit-box-shadow: 0px 0px 32px 10px rgba(71, 74, 81, 0.29)
+                -moz-box-shadow: 0px 0px 32px 10px rgba(71, 74, 81, 0.29)
+                box-shadow: 0px 0px 32px 10px rgba(71, 74, 81, 0.29)
 
 @media (max-width: 1230px)
     .actionSection
@@ -39,10 +63,17 @@
 @media (max-width: 800px)
     .actionSection
         &__section
+            flex-direction: column
             width: 100%
             padding: 20px
-            &_title
-                margin-bottom: 20px
-                font-size: 40px
-            &_description
-                font-size: 30px
+            &_info
+                width: 100%
+                margin-right: 0
+                &__title
+                    margin-bottom: 20px
+                    font-size: 40px
+                &_description
+                    font-size: 30px
+            &_photos
+                justify-content: center
+                width: 100%

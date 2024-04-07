@@ -8,25 +8,27 @@ import BookingButton from "../bookingButton/bookingButton";
 export default function MainInfoSection(): ReactElement {
   return (
     <section className={styles.mainInfoSection}>
-      <div className={styles.mainInfoSection__section}>
-        <div className={styles.mainInfoSection__section_logo}>
-          <Image
-            className={styles.mainInfoSection__section_logo__image}
-            src={logo}
-            alt={"Логотип"}
-            fill
-            sizes="(max-width: 100%)"
-          />
+      <div className={styles.mainInfoSection__darkness}>
+        <div className={styles.mainInfoSection__section}>
+          <div className={styles.mainInfoSection__section_logo}>
+            <Image
+              className={styles.mainInfoSection__section_logo__image}
+              src={logo}
+              alt={"Логотип"}
+              fill
+              sizes="(max-width: 100%)"
+            />
+          </div>
+          <div className={styles.mainInfoSection__section_description}>
+            <p className={styles.mainInfoSection__section_description__text}>
+              Апарт-отель с бассейном в центре Сочи
+            </p>
+            <p className={styles.mainInfoSection__section_description__text}>
+              By «О! HotelGroupe»
+            </p>
+          </div>
+          <BookingButton />
         </div>
-        <div className={styles.mainInfoSection__section_description}>
-          <p className={styles.mainInfoSection__section_description__text}>
-            Апарт-отель с бассейном в центре Сочи
-          </p>
-          <p className={styles.mainInfoSection__section_description__text}>
-            By «О! HotelGroupe»
-          </p>
-        </div>
-        <BookingButton />
       </div>
     </section>
   );

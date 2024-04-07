@@ -96,7 +96,7 @@ export default function RoomsSection(): ReactElement {
         setCurrRoom(currRoom + 1);
       }
       setAnimationClass(styles.slideIn);
-    }, 300); // Время анимации в миллисекундах
+    }, 300);
   };
 
   const previousRoom = () => {
@@ -108,7 +108,7 @@ export default function RoomsSection(): ReactElement {
         setCurrRoom(currRoom - 1);
       }
       setAnimationClass(styles.slideIn);
-    }, 300); // Время анимации в миллисекундах
+    }, 300);
   };
 
   return (

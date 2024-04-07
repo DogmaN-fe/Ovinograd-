@@ -4,6 +4,7 @@ import AboutHotelSection from "./ui/aboutHotelSection/aboutHotelSection";
 import AdvantagesSection from "./ui/advantagesSection/advantagesSection";
 import ActionSection from "./ui/actionSection/actionSection";
 import RoomsSection from "./ui/roomsSection/roomsSection";
+import NextUsSection from "./ui/nextUsSection/nextUsSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <RoomsSection />
       <AdvantagesSection />
       <ActionSection />
+      <NextUsSection />
     </main>
   );
 }

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import styles from "./headerNavigation.module.sass";
-import clsx from "clsx";
 import { useState } from "react";
 
 export default function HeaderNavigation() {
@@ -71,7 +70,7 @@ export default function HeaderNavigation() {
         </li>
         <li className={styles.navigation__links_link}>
           <Link
-            href=""
+            href="/#next-us"
             className={styles.navigation__links_link_href}
             onClick={handleClick}
           >
@@ -134,7 +133,7 @@ export default function HeaderNavigation() {
           </li>
           <li className={styles.navigation__links_link}>
             <Link
-              href=""
+              href="/#next-us"
               className={styles.navigation__links_link_href}
               onClick={handleClick}
             >
