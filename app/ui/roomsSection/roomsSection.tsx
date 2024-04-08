@@ -84,8 +84,25 @@ export default function RoomsSection(): ReactElement {
   ];
 
   const [currRoom, setCurrRoom] = useState(0);
-
   const [animationClass, setAnimationClass] = useState("");
+  let startX: number | null = null;
+
+  const handleTouchStart: React.TouchEventHandler<HTMLDivElement> = (e) => {
+    startX = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd: React.TouchEventHandler<HTMLDivElement> = (e) => {
+    if (startX && e.changedTouches.length) {
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      if (diff > 50) {
+        nextRoom();
+      } else if (diff < -50) {
+        previousRoom();
+      }
+    }
+    startX = null;
+  };
 
   const nextRoom = () => {
     setAnimationClass(styles.slideOut);
@@ -121,6 +138,8 @@ export default function RoomsSection(): ReactElement {
         </div>
         <div
           className={`${styles.roomsSection__section_rooms} ${animationClass}`}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           <RoomCard key={rooms[currRoom].roomName} room={rooms[currRoom]} />
         </div>
