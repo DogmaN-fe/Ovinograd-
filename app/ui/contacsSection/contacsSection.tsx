@@ -22,15 +22,15 @@ export default function ContacsSection(): ReactElement {
           <Image src={mail} alt="иконка локатора" width={16} height={16} />
           <Link
             className={styles.contacsSection__section_title_mail}
-            href="mailto:akvinograd@yandex.ru"
+            href="mailto:example@mail.ru"
           >
-            akvinograd@yandex.ru
+            example@mail.ru
           </Link>
         </span>
         <span className={styles.contacsSection__section_title__position}>
           <Image src={phone} alt="иконка локатора" width={16} height={16} />
-          <Link className={styles.contacsSection__section_title_phone} href={"tel:89881533003"}>
-            8 (988) 153-30-03
+          <Link className={styles.contacsSection__section_title_phone} href={"tel:89889991122"}>
+            8 (988) 999-11-22
           </Link>
         </span>
       </div>
