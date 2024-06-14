@@ -12,18 +12,10 @@ export default function HeaderNavigation() {
   };
 
   const handleClick = (e: any) => {
-    e.preventDefault();
     const targetId = e.target.getAttribute("href").substring(2);
-
-    console.log(window.location.href);
 
     if (window.location.href.includes("/reservations")) {
       window.location.href = `/#${targetId}`;
-    }
-
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
     setIsHidden(true);
